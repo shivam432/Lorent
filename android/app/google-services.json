@@ -1,34 +1,82 @@
 {
   "project_info": {
-    "project_number": "1046799426608",
-    "firebase_url": "https://fir-deba0.firebaseio.com",
-    "project_id": "fir-deba0",
-    "storage_bucket": "fir-deba0.appspot.com"
+    "project_number": "100559390881",
+    "firebase_url": "https://lorent-6b383.firebaseio.com",
+    "project_id": "lorent-6b383",
+    "storage_bucket": "lorent-6b383.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1046799426608:android:17fbe8ee71e2378ae8f9f5",
+        "mobilesdk_app_id": "1:100559390881:android:b7a663357f02a57ae8c8e0",
         "android_client_info": {
-          "package_name": "com.example.demoApp"
+          "package_name": "com.stacknation.LoRent"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1046799426608-67bchf96bipr6qojq0jl6i0qveb4jg68.apps.googleusercontent.com",
+          "client_id": "100559390881-8kn18to8t9grve6vgp2lkn5voenlpqmj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stacknation.LoRent",
+            "certificate_hash": "368ac823b9f1677609c3015ef6669b1bb219ad68"
+          }
+        },
+        {
+          "client_id": "100559390881-cu4j4r8mo9p83db78lu4olpmqkf4ens9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stacknation.LoRent",
+            "certificate_hash": "50b93075e810cdb6bbe1ffeb2da05e9ff746bc6f"
+          }
+        },
+        {
+          "client_id": "100559390881-ed3ih3ac6mpehmrbmif9l4i89d7mnp64.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stacknation.LoRent",
+            "certificate_hash": "fc6c4740cfa5f0e7d13d0276c0e590349102b4e5"
+          }
+        },
+        {
+          "client_id": "100559390881-osq9js9cei2ub5jtm93fk6lpjmi7pinh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stacknation.LoRent",
+            "certificate_hash": "d5887f7d67534e9466530d6d65d3e0f1e8531d02"
+          }
+        },
+        {
+          "client_id": "100559390881-rjfpf9rgkjgv2b64a3qm4sh46c9fqlse.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stacknation.LoRent",
+            "certificate_hash": "f17b58c91a4342aa206f19e78bd79c39fd73b574"
+          }
+        },
+        {
+          "client_id": "100559390881-vjpe7q54b9av63eh0a2c7ul4bit3n306.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stacknation.LoRent",
+            "certificate_hash": "b8fed4c310dc22f68be8926b32a0beee4d7cb68a"
+          }
+        },
+        {
+          "client_id": "100559390881-frri4u7desj29vq1418114elu3pusjuv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCiGK-RuP01953ZAuXBL4Uv-so10u5u3Ao"
+          "current_key": "AIzaSyAy_UkBL3_rQjaVpgA_e03PVj6qnal32E4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1046799426608-67bchf96bipr6qojq0jl6i0qveb4jg68.apps.googleusercontent.com",
+              "client_id": "100559390881-frri4u7desj29vq1418114elu3pusjuv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,12 +1,21 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demoApp/home.dart';
+import 'package:outline_material_icons/outline_material_icons.dart';
+import 'signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   String userId;
   Profile({Key key, @required this.userId}) : super(key: key);
+
+  @override
+  _ProfileState createState() => _ProfileState();
+}
+
+int currentPage = 0;
+
+class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,14 +34,27 @@ class Profile extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                        colors: [Color(0xFF396afc), Color(0xFF2948ff)],
+                        colors: [Color(0xFF5a20c7), Color(0xFF5a20c7)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Text(
+                          "Welcome to Lo Rent\nOwners App",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: "Poiret",
+                              fontWeight: FontWeight.bold,
+                              fontSize: 22),
+                        ),
+                      ),
+                      Spacer(),
                       Column(
                         children: [
                           GestureDetector(
@@ -52,7 +74,9 @@ class Profile extends StatelessWidget {
                           Text(
                             "Log out",
                             style: TextStyle(
-                                color: Colors.white60, fontFamily: "Quicksand"),
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontFamily: "Poiret"),
                           )
                         ],
                       )
@@ -65,7 +89,7 @@ class Profile extends StatelessWidget {
           StreamBuilder(
               stream: FirebaseFirestore.instance
                   .collection("users")
-                  .doc(userId)
+                  .doc(widget.userId)
                   .snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<DocumentSnapshot> snapshot) {
@@ -91,7 +115,7 @@ class Profile extends StatelessWidget {
                           child: Icon(
                             Icons.perm_identity,
                             size: 50,
-                            color: Color(0xFF2948ff),
+                            color: Color(0xFF5a20c7),
                           ),
                         ),
                         SizedBox(
@@ -107,8 +131,8 @@ class Profile extends StatelessWidget {
                         Text(
                           snapshot.data.data()["mail"],
                           style: TextStyle(
-                              fontFamily: "Quicksand",
-                              fontSize: 13,
+                              fontFamily: "Josefin",
+                              fontSize: 17,
                               color: Colors.black87),
                         ),
                         SizedBox(
@@ -117,8 +141,8 @@ class Profile extends StatelessWidget {
                         Row(
                           children: [
                             Icon(
-                              Icons.calendar_today,
-                              color: Color(0xFF2948ff),
+                              OMIcons.calendarToday,
+                              color: Color(0xFF5a20c7),
                               size: 15,
                             ),
                             SizedBox(
@@ -128,29 +152,11 @@ class Profile extends StatelessWidget {
                                 style: TextStyle(
                                     fontFamily: "Quicksand",
                                     fontSize: 15,
-                                    color: Colors.black87))
+                                    color: Colors.black87)),
                           ],
                         ),
                         SizedBox(
                           height: 10,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Icon(
-                              Icons.location_on,
-                              color: Color(0xFF2948ff),
-                              size: 20.0,
-                            ),
-                            SizedBox(
-                              width: 5.0,
-                            ),
-                            Text(
-                              "${snapshot.data.data()["address"]}\n${snapshot.data.data()["city"]},\n${snapshot.data.data()["state"]},  ${snapshot.data.data()["pincode"]}",
-                              style: TextStyle(
-                                  fontFamily: "Josefin", fontSize: 12),
-                            ),
-                          ],
                         ),
                         SizedBox(
                           height: 10,
